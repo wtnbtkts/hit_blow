@@ -29,8 +29,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+        // Do any additional setup after loading the view, typically from a nib.        
         
         // Delegateを設定する.
         pickerView.delegate = self
@@ -52,7 +51,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             // do something
             //NSLog("for statement i:\(i)")
             
-            var random = arc4random_uniform(10);5
+            var random = arc4random_uniform(10);
             //answers[i] = NSString(format:"%d", random) as String
         }
         
@@ -124,7 +123,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             //        textView.text = [string stringByAppendingString:
             //                         lastString];
         } else if (count == 10) {
-            //var i = 0
             var num = answers[0].toInt()!;
             
             for var i = 0; i < pickerView.numberOfComponents ; i++ {
