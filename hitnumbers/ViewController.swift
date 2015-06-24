@@ -151,7 +151,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             //選択されている値のインデックス番号を取得する
             var answer:String! = String(a)
-            var answer2 = answers[i]
+            var answer2 = answers[i] 
             
             //numbers[[pickerView,selectedRowInComponent,i]]
             
