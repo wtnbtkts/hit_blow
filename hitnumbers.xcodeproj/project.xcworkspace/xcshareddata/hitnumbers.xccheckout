@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B782C356-BF9A-4B13-A67A-E5E44F77C35A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>hitnumbers</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8BD0822CB52D35899AA17D50913CD1BC4834ABD5</key>
+		<string>https://github.com/wtnbtkts/hitnumbers.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>hitnumbers.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8BD0822CB52D35899AA17D50913CD1BC4834ABD5</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wtnbtkts/hitnumbers.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8BD0822CB52D35899AA17D50913CD1BC4834ABD5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8BD0822CB52D35899AA17D50913CD1BC4834ABD5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hitnumbers</string>
+		</dict>
+	</array>
+</dict>
+</plist>

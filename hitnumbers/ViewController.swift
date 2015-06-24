@@ -18,6 +18,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var hit:Int = 0
     //挑戦した回数
     var count:Int = 0
+    //picker viewで選択したインデックス番号
+    var a: Int = 0
     
     // 全て文字列の空の配列を宣言
     var numbers: [String] = []
@@ -50,8 +52,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             // do something
             //NSLog("for statement i:\(i)")
             
-            let randInt = arc4random_uniform(10);
-            answers[i] = NSString(format:"%d", randInt) as String
+            var random = arc4random_uniform(10);5
+            //answers[i] = NSString(format:"%d", random) as String
         }
         
         for string in answers{
@@ -73,7 +75,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     (実装必須)表示列
     */
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 3
+        return 4
     }
     
     /*
@@ -93,26 +95,26 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     //選択時
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        a = row
         println("列: \(row)")
         println("値: \(numbers[row])")
     }
     
-
+    
     @IBAction func enter(button:UIButton){
         //var tappedButton:UIButton = sender as UIButton
         //tappedButton.setTitle("tapped", forState:UIControlState.Normal)
-        
         
         count++;
         if (count == 5) {
             var sum = 0;
             
             for var i = 0 ; i < pickerView.numberOfComponents ; i++ {
-                sum += [answers[i] intValue];
+                sum = sum + Int(answers[i].toInt()!)
             }
             
-            let lastString:String! = textView.text;
-            let string:String! = NSString(format:"答えの数の合計は%dだよ！\n", sum) as String
+            var lastString:String! = textView.text;
+            var string:String! = NSString(format:"答えの数の合計は%dだよ！\n", sum) as String
             //文字列結合
             textView.text = string + lastString
             
@@ -122,16 +124,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             //        textView.text = [string stringByAppendingString:
             //                         lastString];
         } else if (count == 10) {
-            var num = [answers[0] intValue];
+            //var i = 0
+            var num = answers[0].toInt()!;
             
             for var i = 0; i < pickerView.numberOfComponents ; i++ {
-                if (num > [answers[i] intValue]) {
-                    num = [answers[i] intValue];
+                if (num > answers[i].toInt()!) {
+                    num = answers[i].toInt()!;
                 }
             }
-
-            let lastString:String! = textView.text;
-            let string:String! = NSString(format:"一番小さい数字は%dだよ！\n", num) as String
+            
+            var lastString:String! = textView.text;
+            var string:String! = NSString(format:"一番小さい数字は%dだよ！\n", num) as String
             //文字列結合
             textView.text = string + lastString
             
@@ -149,10 +152,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             //NSLog("for statement i:\(i)")
             
             //選択されている値のインデックス番号を取得する
-            let answer:String! = numbers[[pickerView
-                selectedRowInComponent,i]]
+            var answer:String! = String(a)
+            var answer2 = answers[i]
             
-            if ([answer isEqual answers[i]]) {
+            //numbers[[pickerView,selectedRowInComponent,i]]
+            
+            if (answer == answer2) {
                 hit = hit + 1;
             }
             
@@ -162,12 +167,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 button.enabled = false;
             } else {
                 label.text = NSString(format:"%d個正解！", hit) as String
-                let lastString:String! = textView.text;
-                let string:String! = NSString(format:"%d個正解！\n", hit) as String
+                var lastString:String! = textView.text;
+                var string:String! = NSString(format:"%d個正解！\n", hit) as String
                 textView.text = string + lastString
             }
             
         }
+    }
 }
-
 
