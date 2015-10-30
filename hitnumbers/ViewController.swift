@@ -16,7 +16,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     //挑戦した回数
     var count = 0
-    
+    //選択数字の配列
     var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     
     //picker viewで選択したインデックス番号
